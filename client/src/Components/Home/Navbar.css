@@ -1,0 +1,85 @@
+.main-header{
+    /* position: fixed; */
+    width: 95%;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-name{
+    font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  font-size: 25px;
+  color: #43cdc9;
+  position: relative;
+  left: -18px;
+  font-weight: 600;
+}
+.logo{
+    flex: 4;
+}
+.logo img{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    top: -4px;
+    right: -3px;
+}
+
+.help a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: #42cfc9;
+}
+
+.feed-back a{
+    text-decoration: none;
+    color: #42cfc9;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    position: relative;
+    background: transparent;
+}
+
+@media screen and (max-width: 480px){
+    .main-header{
+        height: 50px;
+        margin: 4px 0px;
+    }
+    .logo img{
+        position: relative;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        top: -4px;
+        right: -3px;
+    }
+    .logo-name{
+        font-family: 'Nunito', sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        color: #43cdc9;
+        position: relative;
+        left: -18px;
+        font-weight: 600;
+        top: -4px;
+    }
+    .icons{
+        display: flex;
+        justify-content: space-between;
+        flex: .8;
+        position: relative;
+        background: transparent;
+        top: 8px;
+    }
+    .logo{
+        flex: 1;
+    }
+}

@@ -1,0 +1,13 @@
+.sidebar-chats{
+    margin-top: 20px;
+    width: 28%;
+    height: 80vh;
+    background: transparent;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar-chats{
+        display: none;
+    }
+}

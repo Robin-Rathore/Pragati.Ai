@@ -1,0 +1,11 @@
+.video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  /* opacity: 20%; */
+}
+@media screen and (max-width: 480px){
+  .video{
+    height: 100vh;
+  }
+}
