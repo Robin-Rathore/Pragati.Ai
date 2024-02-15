@@ -3,7 +3,13 @@ import "./register.scss";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setLogin } from "../../state/state";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Register = () => {
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,10 +21,17 @@ const Register = () => {
     e.preventDefault();
 
     axios.post(`http://localhost:3001/register`, {name, email, password})
-    .then(result => {console.log(result)
-      navigate('/home')
+    .then(result => {
+      dispatch(
+        setLogin({
+          user : result.data,
+        })
+      );
+      navigate("/home");
     })
-    .catch(err => console.log(err))
+    .catch(err => {
+      toast.error("User Is Already Exist's. Please Login");
+      console.log(err)})
   };
 
   console.log(err)
@@ -43,18 +56,21 @@ const Register = () => {
               type="text"
               placeholder="Username"
               name="name"
+              required="required"
               onChange={(e) => setName(e.target.value)}
             />
             <input
               type="email"
               placeholder="Email"
               name="email"
+              required="required"
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="password"
               placeholder="Password"
               name="password"
+              required="required"
               onChange={(e) => setPassword(e.target.value)}
             />
             {/* <input

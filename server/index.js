@@ -44,12 +44,12 @@ app.post('/login', (req, res) => {
   .then(user => {
     if(user) {
       if(user.password === password) {
-        res.json("Sucess")
+        res.json(true)
       } else{
-        res.json("Failure")
+        res.json(false)
       }
     } else{
-      res.json("User Not Exist's")
+      res.json(false)
     }
   })
 })

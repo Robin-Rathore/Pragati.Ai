@@ -9,7 +9,7 @@ import FadeMenu from './Account';
 const Navbar = () => {
   return (
     <div className='main-header'>
-      <div className="logo"><a className='logo-name' href=""><img src="./Image/logo.png" alt="" />Pragati.ai</a></div>
+      <div className="logo"><a className='logo-name' href="/home"><img src="./Image/logo.png" alt="" />Pragati.ai</a></div>
       <div className="icons">
         <Tooltip  title="Help">
             <div className="help"><a  href="" style={{background:"transparent"}}>{< LiveHelpOutlinedIcon/>}</a></div>
